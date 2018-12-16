@@ -16,6 +16,7 @@ body {
 
 .container {
     position: relative;
+    padding: 20px;
     height: 100vh;
     z-index: 1;
     display: flex;
@@ -27,13 +28,26 @@ body {
 .title {
     font-size: 66px;
     color: #fff;
+    @media(max-width:768px){
+        font-size: 42px;
+    }
+    @media(max-width:480px){
+        font-size: 28px;
+    }
 }
 
 .subtitle {
     margin-top: 100px;
     position: relative;
     color: #fff;
-    font-size: 27px;
+    font-size: 28px;
+    font-family: Arial;
+    @media(max-width:768px){
+        font-size: 22px;
+    }
+    @media(max-width:480px){
+        font-size: 18px;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -43,7 +57,14 @@ body {
         margin: 0 auto;
         display: block;
         height: 2px;
-        width: 500px;
+        max-width: 500px;
         background: #fff;
     }
+}
+
+.next {
+    max-width: 960px;
+    padding: 0 20px;
+    margin: 0 auto;
+    font-family: Arial;
 }
