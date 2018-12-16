@@ -8,7 +8,7 @@ const figures = [
     new Figure(canvas, ctx, 64, "#111111", 300),
     new Figure(canvas, ctx, 64, "#222222", 200),
     new Figure(canvas, ctx, 64, "#333333", 150),
-    new Figure(canvas, ctx, 4, "#ff3443", 100),
+    new Figure(canvas, ctx, 4, "#000", 100),
 ];
 
 function initialCanvas(canvas){
