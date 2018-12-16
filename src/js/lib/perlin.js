@@ -1,7 +1,7 @@
 // This is a port of Ken Perlin's Java code. The
 // original Java code is at http://cs.nyu.edu/%7Eperlin/noise/.
 // Note that in this version, a number from 0 to 1 is returned.
-export default function(x, y, z) {
+export default function perlin(x, y, z) {
 
         var p = new Array(512)
         var permutation = [ 151,160,137,91,90,15,

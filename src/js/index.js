@@ -1,10 +1,9 @@
-import Perlin from './lib/perlin';
 import Figure from './components/Figure';
 import Mouse from './components/Mouse';
 
 let figure1 = new Figure(4, "#ffffff");
 
-const canvas = document.createElement('canvas');
+const canvas = document.querySelector('.canvas');
 const ctx = canvas.getContext('2d');
 let mouse = new Mouse(canvas);
 let mfX = 0, mfY = 0;
@@ -27,10 +26,12 @@ function clear(canvas, ctx){
 }
 
 const figures = [
-    new Figure(4, "#111", 100),
-    new Figure(4, "#535552", 100),
-    new Figure(4, "white", 100),
-    new Figure(4, "#ff3443", 100),
+    new Figure(canvas, ctx, 100, "#111111", 120),
+    new Figure(canvas, ctx, 100, "#222222", 120),
+    new Figure(canvas, ctx, 100, "#333333", 120),
+    new Figure(canvas, ctx, 100, "#535552", 120),
+    new Figure(canvas, ctx, 100, "#c3c3c3", 120),
+    new Figure(canvas, ctx, 4, "#ff3443", 120),
 ];
 
 function update(canvas, ctx, time){
@@ -38,11 +39,9 @@ function update(canvas, ctx, time){
     mfX += 0.05 * (mouse.x / canvas.width/2 - mfX);
     mfY += 0.05 * (mouse.y / canvas.height/2 - mfY);
 
-    console.log(mfX);
-
     ctx.save();
     ctx.translate(canvas.width / 2, canvas.height / 2);
-    ctx.rotate(time/100 * Math.PI / 180);
+    ctx.rotate(time/50 * Math.PI / 180);
     figures.forEach((figure, index) => {
         figure.draw(ctx, time, index, mfX, mfY);
     });
