@@ -1,37 +1,18 @@
-Boilerplate smile (babel, sass, webpack)
+imsi animation
 ===========
 
-> Plain webpack 4 boilerplate with Babel and SASS
+> Demo animation
 
 ## Requirements
 You only need <b>node.js</b> pre-installed and you’re good to go.
 
 ## Setup
-Install dependencies
-```sh
-$ npm install
-```
-or
-```sh
-$ yarn
-```
+* `npm install` or `yarn` - install all dependencies
 
 ## Development
 Run the local webpack-dev-server with livereload and autocompile on [http://localhost:8080/](http://localhost:8080/)
-```sh
-$ npm run dev
-```
-or
-```sh
-$ yarn dev
-```
+* `yarn dev` or `npm run dev` - run dev-server and let magic happen.
 
 ## Deployment
 Build the current application
-```sh
-$ npm run build
-```
-or
-```sh
-$ yarn build
-```
+* `yarn build` of `npm run build` - build project from sources
